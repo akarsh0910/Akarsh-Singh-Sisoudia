@@ -39,21 +39,21 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#111] text-[#f4f4f4] p-8 md:p-16">
-      <Link to="/" className="inline-flex text-gray-400 hover:text-white transition-colors items-center gap-2 mb-12">
+    <div className="min-h-screen bg-[#f4f4f4] p-8 text-[#111] transition-colors duration-500 dark:bg-[#111] dark:text-[#f4f4f4] md:p-16">
+      <Link to="/" className="mb-12 inline-flex items-center gap-2 text-gray-600 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white">
         ← Back to the doors
       </Link>
       
       <h1 className="text-5xl md:text-7xl font-bold mb-4">{project.title}</h1>
-      <h2 className="text-2xl md:text-3xl text-gray-500 mb-8">{project.subtitle}</h2>
+      <h2 className="mb-8 text-2xl text-gray-600 dark:text-gray-500 md:text-3xl">{project.subtitle}</h2>
       
-      <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-gray-800 flex flex-col md:flex-row gap-12 items-center">
+      <div className="flex flex-col items-center gap-12 rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-800 dark:bg-[#1a1a1a] md:flex-row">
         <div className="w-full md:w-1/2 space-y-6">
           <h3 className="text-3xl font-bold">Project Overview</h3>
-          <p className="text-gray-400 text-lg leading-relaxed">{project.description}</p>
+          <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400">{project.description}</p>
           <div className="flex flex-wrap gap-3 pt-4">
             {project.tags.map((tag, i) => (
-              <span key={i} className="px-5 py-2 bg-[#222] border border-gray-700 rounded-full text-sm font-medium">
+              <span key={i} className="rounded-full border border-gray-300 bg-gray-100 px-5 py-2 text-sm font-medium dark:border-gray-700 dark:bg-[#222]">
                 {tag}
               </span>
             ))}

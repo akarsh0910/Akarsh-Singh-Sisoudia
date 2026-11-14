@@ -19,7 +19,7 @@ export default function Navbar() {
   if (location.pathname !== "/") return null;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-6 mix-blend-difference text-[#f4f4f4] text-sm">
+    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between border-b border-black/[0.08] bg-white/60 px-8 py-5 text-sm text-[#111] backdrop-blur-md dark:border-white/[0.06] dark:bg-black/40 dark:text-[#f4f4f4]">
       <div className="flex gap-6 font-medium">
         <a href="#" className="hover:text-gray-400 transition-colors">Home</a>
         <a href="#work" className="hover:text-gray-400 transition-colors">Work</a>
@@ -27,7 +27,7 @@ export default function Navbar() {
         <a href="#contact" className="hover:text-gray-400 transition-colors">Contact</a>
       </div>
       
-      <div className="hidden md:flex gap-8 text-xs font-mono text-gray-400 uppercase tracking-widest">
+      <div className="hidden gap-8 font-mono text-xs uppercase tracking-widest text-gray-600 dark:text-gray-400 md:flex">
         <span>Lucknow, IND</span>
         <span>{time}</span>
         <span className="text-green-500 flex items-center gap-2">
